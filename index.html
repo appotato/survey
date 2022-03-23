@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-12">
+          <form id="regForm">
+            <h1 id="register">Survey Form</h1>
+            <div class="all-steps" id="all-steps">
+              <span class="step"><i class="fa fa-user"></i></span>
+              <span class="step"><i class="fa fa-map-marker"></i></span>
+              <span class="step"><i class="fa fa-shopping-bag"></i></span>
+              <span class="step"><i class="fa fa-car"></i></span>
+              <span class="step"><i class="fa fa-spotify"></i></span>
+              <span class="step"><i class="fa fa-mobile-phone"></i></span>
+              <span class="step"><i class="fa fa-mobile-phone"></i></span>
+              <span class="step"><i class="fa fa-mobile-phone"></i></span>
+              <span class="step"><i class="fa fa-mobile-phone"></i></span>
+              <span class="step"><i class="fa fa-mobile-phone"></i></span>
+            </div>
+            <div class="tab">
+              <h5>Bewerben sich an</h5>
+              <div class="form-check">
+                <input
+                  class="form-check-input radio"
+                  type="radio"
+                  name="flexRadioJobType"
+                  id="flexRadioJobType1"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioJobType1">
+                  Gepäck- oder Flugzeugabfertiger*
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input radio"
+                  type="radio"
+                  name="flexRadioJobType"
+                  id="flexRadioJobType2"
+                />
+                <label class="form-check-label" for="flexRadioJobType2">
+                  Busfahrer (nur Vollzeit)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input radio"
+                  type="radio"
+                  name="flexRadioJobType"
+                  id="flexRadioJobType3"
+                />
+                <label class="form-check-label" for="flexRadioJobType3">
+                  Vollzeit
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input radio"
+                  type="radio"
+                  name="flexRadioJobType"
+                  id="flexRadioJobType4"
+                />
+                <label class="form-check-label" for="flexRadioJobType4">
+                  Teilzeit*
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input radio"
+                  type="radio"
+                  name="flexRadioJobType"
+                  id="flexRadioJobType5"
+                />
+                <label class="form-check-label" for="flexRadioJobType5">
+                  studentische Aushilfe*
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input radio"
+                  type="radio"
+                  name="flexRadioJobType"
+                  id="flexRadioJobType6"
+                />
+                <label class="form-check-label" for="flexRadioJobType6">
+                  Teilzeit nur Wochenende (15 Std. pro Woche)*
+                </label>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0 align-self-center">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="firstName">Vorname</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Vorname"
+                    onkeyup="lettersOnly(this)"
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="lastName">Nachname</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Nachname"
+                    onkeyup="lettersOnly(this)"
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="gender">Geschlecht</span>
+                  <select id="gender" name="gender" class="form-select">
+                    <option selected>Männlich</option>
+                    <option>Weiblich</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="address1">Address</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address1"
+                    name="address1"
+                    placeholder="Straße und Nummer"
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="address2"
+                    >Adresszusatz</span
+                  >
+                  <input
+                    type="text"
+                    class="form-control optional"
+                    id="address2"
+                    name="address2"
+                    placeholder="Floor, flat, etc..."
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="city">Stadt</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    name="city"
+                    placeholder="PLZ, Ort"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="dateOfBirth"
+                    >Geburtsdatum</span
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="dateOfBirth"
+                    name="dateOfBirth"
+                    placeholder="Geburtsdatum"
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="placeOfBirth"
+                    >Geburtsort</span
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="placeOfBirth"
+                    name="placeOfBirth"
+                    placeholder="Geburtsort"
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="nationality"
+                    >Staatangehörigkeit</span
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nationality"
+                    name="nationality"
+                    placeholder="Staatangehörigkeit"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="phone">Tel</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    value="+49"
+                    onfocusout="phoneCheck(this)"
+                  />
+                </div>
+              </div>
+              <br />
+              <div class="col-md-12 mb-0">
+                <div class="input-group mb-1">
+                  <span class="input-group-text" for="email">Email</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="email@gmail.com"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <h5>Führerschein</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioDrivingLicense"
+                    id="flexRadioDrivingLicense1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioDrivingLicense1"
+                  >
+                    Ja
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioDrivingLicense"
+                    id="flexRadioDrivingLicense2"
+                    checked
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioDrivingLicense2"
+                  >
+                    Nein
+                  </label>
+                </div>
+                <h5>Klasse</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioDrivingClass"
+                    id="flexRadioDrivingClass1"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioDrivingClass1">
+                    B
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioDrivingClass"
+                    id="flexRadioDrivingClass2"
+                  />
+                  <label class="form-check-label" for="flexRadioDrivingClass2">
+                    D, DE, 95
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioDrivingClass"
+                    id="flexRadioDrivingClass3"
+                  />
+                  <label class="form-check-label" for="flexRadioDrvingClass3">
+                    sonstige:...
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <h5>Englisch Kenntniss</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioEnglishSkill"
+                    id="flexRadioEnglishSkill1"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioEnglishSkill1">
+                    Basis
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioEnglishSkill"
+                    id="flexRadioEnglishSkill2"
+                  />
+                  <label class="form-check-label" for="flexRadioEnglishSkill2">
+                    Gut
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioEnglishSkill"
+                    id="flexRadioEnglishSkill3"
+                  />
+                  <label class="form-check-label" for="flexRadioEnglishSkill3">
+                    Sehr gut
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <h5>Sind Sie zurzeit in ungekündigter Stellung</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioPosition"
+                    id="flexRadioPosition1"
+                  />
+                  <label class="form-check-label" for="flexRadioPosition1">
+                    Ja, Kündigungfrist
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioPosition"
+                    id="flexRadioPosition2"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioPosition2">
+                    Nein
+                  </label>
+                </div>
+                <h5>Start Wunschtermin</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioStartDate"
+                    id="flexRadioStartDate1"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioStartDate1">
+                    Ab sofort
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioStartDate"
+                    id="flexRadioStartDate2"
+                  />
+                  <label class="form-check-label" for="flexRadioStartDate2">
+                    Ab
+                  </label>
+                </div>
+                <h5>Sind Sie vorbestraft</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioCriminalRecord"
+                    id="flexRadioCriminalRecord1"
+                    checked
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCriminalRecord1"
+                  >
+                    Nein
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioCriminalRecord"
+                    id="flexRadioCriminalRecord2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexRadioCriminalRecord2"
+                  >
+                    Ja
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <h5>Aufenthalstitel</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioVisa"
+                    id="flexRadioVisa1"
+                    checked
+                  />
+                  <label class="form-check-label" for="Visa1">
+                    unbefristet
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioVisa"
+                    id="flexRadioVisa2"
+                  />
+                  <label class="form-check-label" for="flexRadioVisa2">
+                    befristet bis
+                  </label>
+                </div>
+                <h5>Arbeitserlaubnis</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioWorkPermit"
+                    id="flexRadioWorkPermit1"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioWorkPermit1">
+                    unbefristet
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioWorkPermit"
+                    id="flexRadioWorkPermit2"
+                  />
+                  <label class="form-check-label" for="flexRadioWorkPermit2">
+                    befristet bis
+                  </label>
+                </div>
+                <h5>Deutschkenntnis</h5>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioGermanSkill"
+                    id="flexRadioGermanSkill1"
+                    checked
+                  />
+                  <label class="form-check-label" for="flexRadioGermanSkill1">
+                    Basis (A1-A2)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioGermanSkill"
+                    id="flexRadioGermanSkill2"
+                  />
+                  <label class="form-check-label" for="flexRadioGermanSkill2">
+                    Gut (B1-B2)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input radio"
+                    type="radio"
+                    name="flexRadioGermanSkill"
+                    id="flexRadioGermanSkill2"
+                  />
+                  <label class="form-check-label" for="flexRadioGermanSkill2">
+                    Sehr gut (C1)
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <h6>
+                  lückenlose letzte 5 Jahre Beschäftigung / Nicht Beschäftigung
+                </h6>
+                <div id="test">
+                  <p>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample1"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample1"
+                    >
+                      #1
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample2"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample2"
+                    >
+                      #2
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample3"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample3"
+                    >
+                      #3
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample4"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample4"
+                    >
+                      #4
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample5"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample5"
+                    >
+                      #5
+                    </button>
+                  </p>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample1"
+                    data-bs-parent="#test"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-0">
+                      <select class="form-select" aria-label="select">
+                        <option selected>
+                          Art der Beschäftigung/Grund der Nichtbeschäftigung
+                        </option>
+                        <option value="1">Angestellte/-r</option>
+                        <option value="2">Arbeitssuchende/-r</option>
+                        <option value="3">Aushilfe</option>
+                        <option value="4">Beamte/Beamtin</option>
+                        <option value="5">Freiberuflich/Selbstständig</option>
+                        <option value="6">
+                          Schüler/in, Studenten/in; Praktikanten/in
+                        </option>
+                      </select>
+                    </div>
+                    <br />
+                    <div class="col-md-12 mb-0 align-self-center">
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="employer"
+                          >Arbeitsgeber/Universität/Schule:</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="employer"
+                          name="employer"
+                          placeholder="Arbeitsgeber/Universität/Schule"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample2"
+                    data-bs-parent="#test"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-0">
+                      <select class="form-select" aria-label="select">
+                        <option selected>
+                          Art der Beschäftigung/Grund der Nichtbeschäftigung
+                        </option>
+                        <option value="1">Angestellte/-r</option>
+                        <option value="2">Arbeitssuchende/-r</option>
+                        <option value="3">Aushilfe</option>
+                        <option value="4">Beamte/Beamtin</option>
+                        <option value="5">Freiberuflich/Selbstständig</option>
+                        <option value="6">
+                          Schüler/in, Studenten/in; Praktikanten/in
+                        </option>
+                      </select>
+                    </div>
+                    <br />
+                    <div class="col-md-12 mb-0 align-self-center">
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="employer"
+                          >Arbeitsgeber/Universität/Schule:</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="employer"
+                          name="employer"
+                          placeholder="Arbeitsgeber/Universität/Schule"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample3"
+                    data-bs-parent="#test"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-0">
+                      <select class="form-select" aria-label="select">
+                        <option selected>
+                          Art der Beschäftigung/Grund der Nichtbeschäftigung
+                        </option>
+                        <option value="1">Angestellte/-r</option>
+                        <option value="2">Arbeitssuchende/-r</option>
+                        <option value="3">Aushilfe</option>
+                        <option value="4">Beamte/Beamtin</option>
+                        <option value="5">Freiberuflich/Selbstständig</option>
+                        <option value="6">
+                          Schüler/in, Studenten/in; Praktikanten/in
+                        </option>
+                      </select>
+                    </div>
+                    <br />
+                    <div class="col-md-12 mb-0 align-self-center">
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="employer"
+                          >Arbeitsgeber/Universität/Schule:</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="employer"
+                          name="employer"
+                          placeholder="Arbeitsgeber/Universität/Schule"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample4"
+                    data-bs-parent="#test"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-0">
+                      <select class="form-select" aria-label="select">
+                        <option selected>
+                          Art der Beschäftigung/Grund der Nichtbeschäftigung
+                        </option>
+                        <option value="1">Angestellte/-r</option>
+                        <option value="2">Arbeitssuchende/-r</option>
+                        <option value="3">Aushilfe</option>
+                        <option value="4">Beamte/Beamtin</option>
+                        <option value="5">Freiberuflich/Selbstständig</option>
+                        <option value="6">
+                          Schüler/in, Studenten/in; Praktikanten/in
+                        </option>
+                      </select>
+                    </div>
+                    <br />
+                    <div class="col-md-12 mb-0 align-self-center">
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="employer"
+                          >Arbeitsgeber/Universität/Schule:</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="employer"
+                          name="employer"
+                          placeholder="Arbeitsgeber/Universität/Schule"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample5"
+                    data-bs-parent="#test"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 mb-0">
+                      <select class="form-select" aria-label="select">
+                        <option selected>
+                          Art der Beschäftigung/Grund der Nichtbeschäftigung
+                        </option>
+                        <option value="1">Angestellte/-r</option>
+                        <option value="2">Arbeitssuchende/-r</option>
+                        <option value="3">Aushilfe</option>
+                        <option value="4">Beamte/Beamtin</option>
+                        <option value="5">Freiberuflich/Selbstständig</option>
+                        <option value="6">
+                          Schüler/in, Studenten/in; Praktikanten/in
+                        </option>
+                      </select>
+                    </div>
+                    <br />
+                    <div class="col-md-12 mb-0 align-self-center">
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="employer"
+                          >Arbeitsgeber/Universität/Schule:</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="employer"
+                          name="employer"
+                          placeholder="Arbeitsgeber/Universität/Schule"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab">
+              <div class="col-md-12 mb-0">
+                <h6>lückenlose letzte 10 Jahre Wohnanschrift</h6>
+                <div id="last10YearAddress">
+                  <p>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample1"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample1"
+                    >
+                      #1
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample2"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample2"
+                    >
+                      #2
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample3"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample3"
+                    >
+                      #3
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample4"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample4"
+                    >
+                      #4
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample5"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample5"
+                    >
+                      #5
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample6"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample6"
+                    >
+                      #6
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample7"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample7"
+                    >
+                      #7
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample8"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample8"
+                    >
+                      #8
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample9"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample9"
+                    >
+                      #9
+                    </button>
+                    <button
+                      class="btn btn-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#multiCollapseExample10"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample10"
+                    >
+                      #10
+                    </button>
+                  </p>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample1"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample2"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample3"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample4"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample5"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample6"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample7"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample8"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample9"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="collapse indent"
+                    id="multiCollapseExample10"
+                    data-bs-parent="#last10YearAddress"
+                  >
+                    <div class="row">
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="from">Von</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="from"
+                            name="from"
+                            placeholder="Von"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-0">
+                        <div class="input-group mb-1">
+                          <span class="input-group-text" for="to">Bis</span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="to"
+                            name="to"
+                            placeholder="Bis"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="address1"
+                          >Address</span
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address1"
+                          name="address1"
+                          placeholder="Straße und Nummer"
+                        />
+                      </div>
+                      <div class="input-group mb-1">
+                        <span class="input-group-text" for="city">Stadt</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="city"
+                          name="city"
+                          placeholder="PLZ, Ort"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thanks-message text-center" id="text-message">
+              <img
+                src="https://i.imgur.com/O18mJ1K.png"
+                width="100"
+                class="mb-4"
+              />
+              <h3>Thankyou for your feedback!</h3>
+              <span
+                >Thanks for your valuable information. It helps us to improve
+                our services!</span
+              >
+            </div>
+            <div style="overflow: auto" id="nextprevious">
+              <div style="float: right">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                  <i class="fa fa-angle-double-left"></i>
+                </button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                  <i class="fa fa-angle-double-right"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
